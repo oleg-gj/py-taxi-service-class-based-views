@@ -8,10 +8,10 @@
   <a><b>First name: </b>{{ driver.first_name }}</a><br>
   <a><b>Last name: </b>{{ driver.last_name }}</a><br><br>
 
+  <h3><b>Cars model: </b></h3>
+  <ul>
   {% for car in driver.cars.all  %}
-    <h3><b>Cars model: </b>{{ car.model}}</h3>
-    <a><b>License number: </b>{{ car }}</a><br>
-    <a><b>First name: </b>{{ car }}</a><br>
-    <a><b>Last name: </b>{{ car }}</a><br><br>
+    <li><b>{{ car.model}}</b></li>
   {% endfor %}
+  </ul>
 {% endblock %}
